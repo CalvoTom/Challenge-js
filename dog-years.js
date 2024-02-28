@@ -21,7 +21,9 @@ function dogYears(planet, age) {
         currentPlanetEarthYear = 1.0;
     }
 
-    const ageInDogYears = Math.round(((age * 7) * currentPlanetEarthYear)*100)/100;;
+    const ageInDogYears = Math.round(((age * 7) / currentPlanetEarthYear)*100)/100;;
 
     return ageInDogYears;
 }
+
+console.log(dogYears('mercury', 2134835688));
