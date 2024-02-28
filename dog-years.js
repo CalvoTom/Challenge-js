@@ -1,29 +1,27 @@
 function dogYears(planet, age) {
-    age = age / 31556926;
-    const earthYear = 365.25;
     let currentPlanetEarthYear;
 
     if (planet === 'mercury') {
-        currentPlanetEarthYear = 0.2408467;
+        currentPlanetEarthYear = 31557600 * 0.2408467;
     } else if (planet === 'venus') {
-        currentPlanetEarthYear = 0.61519726;
+        currentPlanetEarthYear = 31557600 * 0.61519726;
     } else if (planet === 'mars') {
-        currentPlanetEarthYear = 1.8808158;
+        currentPlanetEarthYear = 31557600 * 1.8808158;
     } else if (planet === 'jupiter') {
-        currentPlanetEarthYear = 11.862615;
+        currentPlanetEarthYear = 31557600 * 11.862615;
     } else if (planet === 'saturn') {
-        currentPlanetEarthYear = 29.447498;
+        currentPlanetEarthYear = 31557600 * 29.447498;
     } else if (planet === 'uranus') {
-        currentPlanetEarthYear = 84.016846;
+        currentPlanetEarthYear = 31557600 * 84.016846;
     } else if (planet === 'neptune') {
-        currentPlanetEarthYear = 164.79132;
+        currentPlanetEarthYear = 31557600 * 164.79132;
     } else {
-        currentPlanetEarthYear = 1.0;
+        currentPlanetEarthYear = 31557600;
     }
 
-    const ageInDogYears = Math.round(((age * 7) / currentPlanetEarthYear)*100)/100;;
+    const ageInDogYears = (age / currentPlanetEarthYear)*7;
 
-    return ageInDogYears;
+    return Math.round(ageInDogYears * 100) / 100;
 }
 
 console.log(dogYears('mercury', 2134835688));
