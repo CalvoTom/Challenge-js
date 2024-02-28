@@ -2,7 +2,7 @@ is.num = (value) => {
         return typeof value === 'number';
     };
 is.nan = (value) =>{
-        return typeof value === 'NaN';
+        return Number.isNaN(value);
     };
 is.str = (value) => {
         return typeof value === 'string';
