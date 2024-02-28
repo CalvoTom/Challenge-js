@@ -19,8 +19,8 @@ is.def= (value) => {
 is.arr= (value) => {
         return Array.isArray(value);
     };
-is.obj= (value) => {
-        return value !== null && typeof value === 'object';
+is.obj = (value) => {
+    return value !== null && typeof value === 'object' && !Array.isArray(value);
     };
 is.fun= (value) => {
         return typeof value === 'function';
