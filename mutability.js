@@ -1,11 +1,5 @@
-const person = {
-    name: 'Rick',
-    age: 77,
-    country: 'US',
-};
-
-let clone1 = { ...person };
-let clone2 = { ...person };
-let samePerson = person
+const clone1 = { ...person };
+const clone2 = { ...person };
+const samePerson = person
 person.age += 1;
 person.country = 'FR';
