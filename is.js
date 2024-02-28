@@ -1,35 +1,33 @@
-is = {
-    num: function(value) {
+is.num = (value) => {
         return typeof value === 'number';
-    },
-    nan: function(value) {
+    };
+is.nan = (value) =>{
         return isNaN(value);
-    },
-    str: function(value) {
+    };
+is.str = (value) => {
         return typeof value === 'string';
-    },
-    bool: function(value) {
+    };
+is.bool= (value) => {
         return typeof value === 'boolean';
-    },
-    undef: function(value) {
+    };
+is.undef= (value) => {
         return typeof value === 'undefined';
-    },
-    def: function(value) {
+    };
+is.def= (value) => {
         return typeof value !== 'undefined';
-    },
-    arr: function(value) {
+    };
+is.arr= (value) => {
         return Array.isArray(value);
-    },
-    obj: function(value) {
+    };
+is.obj= (value) => {
         return value !== null && typeof value === 'object';
-    },
-    fun: function(value) {
+    };
+is.fun= (value) => {
         return typeof value === 'function';
-    },
-    truthy: function(value) {
+    };
+is.truthy= (value) => {
         return Boolean(value);
-    },
-    falsy: function(value) {
+    };
+is.falsy= (value) => {
         return !Boolean(value);
-    }
-};
+    };
