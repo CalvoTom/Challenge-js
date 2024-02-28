@@ -4,8 +4,8 @@ const person = {
     country: 'US',
 };
 
-const clone1 = { ...person };
-const clone2 = { ...person };
-const samePerson = person
+let clone1 = { ...person };
+let clone2 = { ...person };
+let samePerson = person
 person.age += 1;
 person.country = 'FR';
