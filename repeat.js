@@ -1,8 +1,9 @@
 function repeat(str, n) {
-    let count = 0;
-    while (count <= n) {
-        count++;
-        str += str;
+    let newstring = str;
+    if (n != 0) {
+        newstring += str;
+        repeat(str, n-1)
     }
-    return str
+    newstring += str;
+    return newstring
 }
