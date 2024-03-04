@@ -1,7 +1,7 @@
 function repeat(str, n) {
-    let newstring = str;
+    let newstring = "";
     let count = 0;
-    while (count !== n) {
+    while (count < n) {
         count++;
         newstring = newstring + str;
     }
