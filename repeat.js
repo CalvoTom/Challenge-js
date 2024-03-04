@@ -1,4 +1,4 @@
-function repeat(n, str) {
+function repeat(str, n) {
     let count = 0;
     while (count <= n) {
         count++;
