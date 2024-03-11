@@ -6,14 +6,13 @@ function indexOf(array, value, index = 0){
     }
     return -1;
 }
-function lastIndexOf(array, value, index = 0){
-    let lastIndex = -1;
-    for (let i = index; i < array.length; i++){
+function lastIndexOf(array, value, index = array.length-1){
+    for (let i = index; i >= 0; i--){
         if (array[i] === value){
-            lastIndex = i;
+            return i;
         }
     }
-    return lastIndex;
+    return -1;
 }
 function includes(array, value){
     for (let i of array){
@@ -23,7 +22,3 @@ function includes(array, value){
     }
     return false;
 }
-
-console.log(indexOf([0,3,1,4,3],3,2));
-console.log(lastIndexOf(['t', 0, 0, 't'], 't', 2));
-console.log(includes([0,1,4,3],4));
