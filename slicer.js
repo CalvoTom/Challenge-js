@@ -3,6 +3,8 @@ function slice (str, startIndex, EndIndex = str.length){
         let result = "";
         if (Math.sign(startIndex) === -1){
             startIndex = str.length + startIndex;
+        }else if (Math.sign(EndIndex) === -1){
+            EndIndex = str.length + EndIndex;
         }
         if((!EndIndex) || (EndIndex > str.length)) {
             for(let i = startIndex; i<str.length; i++) {
@@ -18,6 +20,8 @@ function slice (str, startIndex, EndIndex = str.length){
         let result = [];
         if (Math.sign(startIndex) === -1){
             startIndex = str.length + startIndex;
+        }else if (Math.sign(EndIndex) === -1){
+            EndIndex = str.length + EndIndex;
         }
         if ((!EndIndex) || (EndIndex > str.length)) {
             for (let i = startIndex; i < str.length; i++) {
