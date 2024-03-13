@@ -20,7 +20,6 @@ function divide (a,b){
         n++;
     }
     if (sign === -1 && Math.sign(b) === -1) {
-        console.log("here");
         return n;
     }else if (sign === -1 || Math.sign(b) === -1){
         return -n;
@@ -30,15 +29,5 @@ function divide (a,b){
 }
 
 function modulo (a,b){
-    let rest = Math.abs(a);
-    let n = 0;
-    while (rest - Math.abs(b) >= 0){
-        rest -= Math.abs(b);
-        n++;
-    }
-    if (Math.sign(b)===-1){
-        return -rest;
-    }else{
-        return rest;
-    }
+    return a - multiply(b, divide(a,b));
 }
