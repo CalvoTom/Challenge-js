@@ -13,9 +13,6 @@ function multiply (a,b){
 
 function divide (a,b){
     let sign = Math.sign(a);
-    if (Math.sign(b)===-1){
-        sign ? (sign = 1) : (sign = -1);
-    }
     let rest = Math.abs(a);
     let n = 0;
     while (rest - Math.abs(b) >= 0){
@@ -23,6 +20,7 @@ function divide (a,b){
         n++;
     }
     if (sign === -1 && Math.sign(b) === -1) {
+        console.log("here");
         return n;
     }else if (sign === -1 || Math.sign(b) === -1){
         return -n;
