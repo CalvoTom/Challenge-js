@@ -22,8 +22,8 @@ function divide (a,b){
         rest -= Math.abs(b);
         n++;
     }
-    if (sign === -1){
-        return -rest;
+    if (sign === -1 || Math.sign(b) === -1){
+        return -n;
     }else{
         return  n;
     }
