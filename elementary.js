@@ -36,5 +36,9 @@ function modulo (a,b){
         rest -= Math.abs(b);
         n++;
     }
-    return Math.sign(b)*rest;
+    if (Math.sign(b)===-1){
+        return -rest;
+    }else{
+        return rest;
+    }
 }
