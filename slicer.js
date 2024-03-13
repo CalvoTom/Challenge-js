@@ -3,7 +3,8 @@ function slice (str, startIndex, EndIndex = str.length){
         let result = "";
         if (Math.sign(startIndex) === -1){
             startIndex = str.length + startIndex;
-        }else if (Math.sign(EndIndex) === -1){
+        }
+        if (Math.sign(EndIndex) === -1){
             EndIndex = str.length + EndIndex;
         }
         if((!EndIndex) || (EndIndex > str.length)) {
@@ -20,7 +21,8 @@ function slice (str, startIndex, EndIndex = str.length){
         let result = [];
         if (Math.sign(startIndex) === -1){
             startIndex = str.length + startIndex;
-        }else if (Math.sign(EndIndex) === -1){
+        }
+        if (Math.sign(EndIndex) === -1){
             EndIndex = str.length + EndIndex;
         }
         if ((!EndIndex) || (EndIndex > str.length)) {
