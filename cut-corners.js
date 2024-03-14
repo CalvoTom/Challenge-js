@@ -1,15 +1,51 @@
 function round(num) {
-    return Math.sign(num) * Math.round(Math.abs(num));
+    if (isDecimal(num) === false){
+        return num;
+    }else {
+        return num.toFixed(0);
+    }
 }
 
-function ceil(num) {
-    return Math.sign(num) * Math.ceil(Math.abs(num));
+function ceil(num){
+    let nb = 0;
+    if (isDecimal(num)===false){
+        return num ;
+    }else{
+        nb = parseInt(num);
+        if (nb < num){
+            return nb + 1;
+        }else{
+            return nb;
+        }
+    }
 }
 
-function floor(num) {
-    return Math.sign(num) * Math.floor(Math.abs(num));
+function floor(num){
+    let nb = 0;
+    if (isDecimal(num)===false){
+        return num ;
+    }else{
+        nb = parseInt(num);
+        if (nb > num){
+            return nb - 1;
+        }else{
+            return nb;
+        }
+    }
 }
-
-function trunc(num) {
-    return Math.sign(num) * Math.trunc(Math.abs(num));
+function trunc(num){
+    let nb = 0;
+    if (isDecimal(num)===false){
+        return num ;
+    }else{
+        nb = parseInt(num);
+        if (nb > num){
+            return nb - 1;
+        }else{
+            return nb;
+        }
+    }
+}
+function isDecimal(num) {
+    return (num ^ 0) !== num;
 }
