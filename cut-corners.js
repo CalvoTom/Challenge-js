@@ -40,6 +40,9 @@ function floor(number){
     }
 }
 function trunc(number){
+    if (number > 0xfffffffff){
+        return number;
+    }
     if (number > 0){
         return ceil(number)-1
     } else {
