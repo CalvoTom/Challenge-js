@@ -1,7 +1,4 @@
 function round(number){
-    if (number > 0xfffffffff){
-        return number;
-    }
     if (number > 0){
         if (Math.abs(modulo(number, 1)) < 0.5){
             return number - modulo(number, 1)
@@ -17,9 +14,6 @@ function round(number){
     }
 }
 function ceil(number){
-    if (number > 0xfffffffff){
-        return number;
-    }
     if (number > round(number)){
         return round(number) + 1
     } else {
@@ -27,9 +21,6 @@ function ceil(number){
     }
 }
 function floor(number){
-    if (number > 0xfffffffff){
-        return number;
-    }
     if (number === 0){
         return 0
     }
@@ -41,7 +32,7 @@ function floor(number){
 }
 function trunc(number){
     if (number > 0xfffffffff){
-        return number;
+        return number + 0xfffffffff;
     }
     if (number > 0){
         return ceil(number)-1
