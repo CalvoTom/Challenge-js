@@ -32,7 +32,7 @@ function floor(number){
 }
 function trunc(number){
     if (number > 0xfffffffff){
-        return number + 0xfffffffff;
+        return 0xfffffffff + ~~(number-0xfffffffff);
     }
     if (number > 0){
         return ceil(number)-1
