@@ -1,13 +1,13 @@
 export function getArchitects (){
-    const ArrayTagA = document.getElementsByTagName("a")
-    const ArrayNonArchitect = document.getElementsByTagName("span")
+    const ArrayTagA = document.querySelectorAll("body a")
+    const ArrayNonArchitect = document.querySelectorAll("body span")
     const Array = [ArrayTagA, ArrayNonArchitect]
     return Array
 }
 
 export function getClassical(){
-    const ArrayClassClassical = document.getElementsByClassName("classical")
-    const ArrayNonClassical = document.getElementsByClassName("modern baroque")
+    const ArrayClassClassical = document.querySelectorAll("a.classical")
+    const ArrayNonClassical = document.querySelectorAll("a:not(.classical)")
     const Array = [ArrayClassClassical, ArrayNonClassical]
     return Array
 }
