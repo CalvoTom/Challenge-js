@@ -4,8 +4,8 @@ export function build(nbBrick){
             const newBrick = document.createElement("div");
             newBrick.id = "brick-"+id.toString();
             newBrick.innerText = id.toString();
-            if (id%2 === 0){
-                newBrick.foundation = "true";
+            if (id%3 === 2){
+                newBrick.setAttribute("foundation","true");
             }
             document.body.appendChild(newBrick);
             id++
@@ -18,12 +18,16 @@ export function build(nbBrick){
 export function repair(...ids){
     ids.forEach((id) =>{
         const currentBrick = document.querySelector("#"+id);
-        if (!("foundation" in currentBrick.dataset)) {
-            currentBrick.repaired = "in progress";
-            currentBrick.innerText += "-in progress";
+        if (currentBrick.getAttribute("foundation") === "true") {
+            currentBrick.setAttribute("repaired", "in progress");
+            let idMiddle = currentBrick.getAttribute("id");
+            idMiddle.replace('brick-', '');
+            currentBrick.innerText = idMiddle + "-in progress";
         }else{
-            currentBrick.repaired = "true";
-           currentBrick.innerText += "-repaired";
+            currentBrick.setAttribute("repaired", "true");
+            let idExt = currentBrick.getAttribute("id");
+            idExt.replace('brick-', '');
+            currentBrick.innerText = idExt + "-repaired";
         }
     });
 
